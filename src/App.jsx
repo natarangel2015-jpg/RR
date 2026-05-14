@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import headerLogo from "./transparente_logo_clean.png";
 import profilePhoto from "./renata-profile.jpeg";
 
-const whatsappUrl = "https://wa.me/5500000000000";
+const whatsappUrl = "https://wa.me/5527988481857";
 
 function cx(...classes) {
   return classes.filter(Boolean).join(" ");
