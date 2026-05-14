@@ -67,11 +67,11 @@ function Icon({ name, className = "" }) {
 
 function LogoMark({ className = "" }) {
   return (
-    <div className={cx("flex items-center pt-3 md:pt-8", className)}>
+    <div className={cx("flex items-center pt-1 sm:pt-2 md:pt-8", className)}>
       <img
         src={headerLogo}
         alt="RR Tecnologia e Qualidade"
-        className="w-[188px] min-w-[188px] object-contain sm:w-[205px] sm:min-w-[205px] md:w-[220px] md:min-w-[220px] lg:w-[240px] lg:min-w-[240px]"
+        className="w-[148px] min-w-[148px] object-contain sm:w-[188px] sm:min-w-[188px] md:w-[220px] md:min-w-[220px] lg:w-[240px] lg:min-w-[240px]"
       />
     </div>
   );
@@ -132,8 +132,8 @@ export default function RRLandingPage() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(7,17,31,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(7,17,31,0.035)_1px,transparent_1px)] bg-[size:72px_72px]" />
       </div>
 
-      <header className="relative z-10 mx-auto max-w-7xl px-6 py-6 lg:px-8">
-        <div className="flex items-center rounded-[1.75rem] border border-white/60 bg-white/34 px-5 py-3 shadow-[0_18px_48px_rgba(7,17,31,0.045)] backdrop-blur-xl md:px-6">
+      <header className="relative z-10 mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
+        <div className="flex items-center rounded-[1.5rem] border border-white/60 bg-white/34 px-4 py-3 shadow-[0_18px_48px_rgba(7,17,31,0.045)] backdrop-blur-xl sm:rounded-[1.75rem] sm:px-5 md:px-6">
           <a href="#topo" aria-label="RR Tecnologia e Qualidade" className="shrink-0 self-center">
             <LogoMark />
           </a>
@@ -147,27 +147,27 @@ export default function RRLandingPage() {
         </div>
       </header>
 
-      <section id="topo" className="relative z-10 mx-auto grid max-w-7xl items-start gap-14 px-6 pb-24 pt-8 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:pb-32 lg:pt-12">
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="pt-2">
-          <div className="mb-8 flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.22em] text-[#07111F]/58">
-            <span className="h-px w-12 bg-gradient-to-r from-[#1488FF] to-[#4DE2FF]" />
+      <section id="topo" className="relative z-10 mx-auto grid max-w-7xl items-start gap-10 px-4 pb-20 pt-6 sm:gap-14 sm:px-6 sm:pb-24 sm:pt-8 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:pb-32 lg:pt-12">
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="pt-1 sm:pt-2">
+          <div className="mb-6 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#07111F]/58 sm:mb-8 sm:gap-4 sm:text-sm sm:tracking-[0.22em]">
+            <span className="h-px w-8 bg-gradient-to-r from-[#1488FF] to-[#4DE2FF] sm:w-12" />
             <span>Estratégia, tecnologia e posicionamento</span>
           </div>
-          <h1 className="max-w-5xl text-[3.35rem] font-black leading-[0.92] tracking-[-0.05em] md:text-[4.6rem] lg:max-w-[10ch] lg:text-[5.6rem]">
+          <h1 className="max-w-5xl text-[2.95rem] font-black leading-[0.92] tracking-[-0.05em] sm:text-[3.35rem] md:text-[4.6rem] lg:max-w-[10ch] lg:text-[5.6rem]">
             Presença digital com <span className="inline-block pr-2 bg-gradient-to-r from-[#0B1630] via-[#655CF6] to-[#8D80FF] bg-clip-text text-transparent">autoridade</span>, clareza e resultado.
           </h1>
-          <p className="mt-8 max-w-[58ch] text-[1.08rem] leading-9 text-[#07111F]/64">
+          <p className="mt-6 max-w-[58ch] text-base leading-8 text-[#07111F]/64 sm:mt-8 sm:text-[1.08rem] sm:leading-9">
             A RR Tecnologia e Qualidade une análise de negócio, branding, tráfego, sites, sistemas e soluções com IA para transformar presença digital em uma estrutura sólida de crescimento.
           </p>
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <Button href={whatsappUrl} size="lg" variant="primary">
+          <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:gap-4 sm:flex-row">
+            <Button href={whatsappUrl} size="lg" variant="primary" className="w-full sm:w-auto">
               Solicitar diagnóstico <Icon name="arrow" className="ml-2 h-4 w-4" />
             </Button>
-            <Button href="#solucoes" size="lg" variant="outline" className="border-[#07111F]/10 bg-white/82">
+            <Button href="#solucoes" size="lg" variant="outline" className="w-full border-[#07111F]/10 bg-white/82 sm:w-auto">
               Ver soluções
             </Button>
           </div>
-          <div className="mt-14 grid max-w-4xl gap-4 auto-rows-fr sm:grid-cols-3">
+          <div className="mt-10 grid max-w-4xl gap-4 auto-rows-fr sm:mt-14 sm:grid-cols-3">
             {highlights.map((item) => (
               <div key={item.value} className="flex h-full flex-col rounded-[1.8rem] border border-white/70 bg-white/82 p-6 text-left shadow-[0_18px_45px_rgba(7,17,31,0.07)] backdrop-blur">
                 <p className="text-2xl font-black text-[#07111F]">{item.value}</p>
@@ -179,24 +179,24 @@ export default function RRLandingPage() {
 
         <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.15 }} className="relative lg:pt-6">
           <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-[#4DE2FF]/16 via-white to-[#1488FF]/18 blur-3xl" />
-          <div className="relative overflow-hidden rounded-[2.7rem] border border-white/80 bg-white/88 p-6 shadow-[0_36px_100px_rgba(7,17,31,0.14)] backdrop-blur">
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/88 p-4 shadow-[0_36px_100px_rgba(7,17,31,0.14)] backdrop-blur sm:rounded-[2.7rem] sm:p-6">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(77,226,255,0.16),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(20,136,255,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.65),rgba(255,255,255,0.9))]" />
-            <div className="relative rounded-[2.2rem] border border-[#07111F]/8 bg-white/92 p-7 lg:p-8">
-              <div className="flex min-h-[330px] flex-col justify-between gap-6">
-                <div className="flex items-center justify-between gap-4 border-b border-[#07111F]/8 pb-4">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#07111F]/52">Direção estratégica</span>
-                  <span className="h-px flex-1 bg-[#07111F]/8" />
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#07111F]/52">Crescimento com clareza</span>
+            <div className="relative rounded-[1.7rem] border border-[#07111F]/8 bg-white/92 p-5 sm:rounded-[2.2rem] sm:p-7 lg:p-8">
+              <div className="flex min-h-[330px] flex-col justify-between gap-5 sm:gap-6">
+                <div className="flex flex-col items-start gap-3 border-b border-[#07111F]/8 pb-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#07111F]/52 sm:text-[11px] sm:tracking-[0.34em]">Direção estratégica</span>
+                  <span className="hidden h-px flex-1 bg-[#07111F]/8 sm:block" />
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#07111F]/52 sm:text-[11px] sm:tracking-[0.34em]">Crescimento com clareza</span>
                 </div>
 
-                <div className="rounded-[2rem] border border-[#07111F]/6 bg-[linear-gradient(180deg,#FFFFFF_0%,#F8FBFF_100%)] p-6 lg:p-7">
-                  <p className="text-sm font-bold uppercase tracking-[0.24em] text-[#1488FF]">A RR entra para organizar, posicionar e elevar a operação digital.</p>
-                  <h3 className="mt-4 max-w-[16ch] text-[2rem] font-black leading-[1.02] tracking-[-0.045em] text-[#07111F]">
+                <div className="rounded-[1.6rem] border border-[#07111F]/6 bg-[linear-gradient(180deg,#FFFFFF_0%,#F8FBFF_100%)] p-5 sm:rounded-[2rem] sm:p-6 lg:p-7">
+                  <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-[#1488FF] sm:text-sm sm:tracking-[0.24em]">A RR entra para organizar, posicionar e elevar a operação digital.</p>
+                  <h3 className="mt-4 max-w-[16ch] text-[1.7rem] font-black leading-[1.02] tracking-[-0.045em] text-[#07111F] sm:text-[2rem]">
                     Menos improviso, mais estrutura para a empresa transmitir valor e vender melhor.
                   </h3>
                   <div className="mt-6 space-y-3">
                     {focusAreas.map((item) => (
-                      <div key={item} className="flex items-start gap-3 rounded-[1.4rem] border border-[#07111F]/8 bg-white/80 px-4 py-3.5">
+                      <div key={item} className="flex items-start gap-3 rounded-[1.2rem] border border-[#07111F]/8 bg-white/80 px-4 py-3 sm:rounded-[1.4rem] sm:py-3.5">
                         <Icon name="check" className="mt-0.5 h-5 w-5 shrink-0 text-[#1488FF]" />
                         <p className="text-sm font-medium leading-6 text-[#07111F]/76">{item}</p>
                       </div>
@@ -220,7 +220,7 @@ export default function RRLandingPage() {
         </motion.div>
       </section>
 
-      <section id="solucoes" className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <section id="solucoes" className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 flex items-center justify-center gap-4 text-sm font-semibold uppercase tracking-[0.22em] text-[#07111F]/58">
             <span className="h-px w-12 bg-gradient-to-r from-[#1488FF] to-[#4DE2FF]" />
@@ -244,7 +244,7 @@ export default function RRLandingPage() {
         </div>
       </section>
 
-      <section id="sobre" className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <section id="sobre" className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative">
             <div className="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-[#4DE2FF]/14 to-[#1488FF]/16 blur-3xl" />
@@ -301,7 +301,7 @@ export default function RRLandingPage() {
         </div>
       </section>
 
-      <section className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <section className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="grid gap-8 auto-rows-fr lg:grid-cols-[0.95fr_1.05fr]">
           <div className="flex h-full flex-col rounded-[2.5rem] border border-white/10 bg-[#07111F] p-8 text-white shadow-[0_30px_90px_rgba(7,17,31,0.18)] md:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#4DE2FF]">IA com Baseon</p>
@@ -320,7 +320,7 @@ export default function RRLandingPage() {
         </div>
       </section>
 
-      <section id="processo" className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <section id="processo" className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#1488FF]">Como funciona</p>
@@ -342,8 +342,8 @@ export default function RRLandingPage() {
         </div>
       </section>
 
-      <section id="contato" className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div className="overflow-hidden rounded-[2.7rem] border border-white/10 bg-[#07111F] p-8 text-center text-white shadow-[0_30px_100px_rgba(7,17,31,0.22)] md:p-14">
+      <section id="contato" className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#07111F] p-6 text-center text-white shadow-[0_30px_100px_rgba(7,17,31,0.22)] sm:rounded-[2.7rem] sm:p-8 md:p-14">
           <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#4DE2FF]">Próximo passo</p>
           <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black tracking-[-0.05em] md:text-6xl">Vamos deixar sua presença digital mais forte, profissional e preparada para crescer?</h2>
           <p className="mx-auto mt-6 max-w-2xl leading-8 text-white/70">Converse com a RR Tecnologia e Qualidade para estruturar marca, tráfego, tecnologia, processos e IA com mais clareza e sofisticação.</p>
