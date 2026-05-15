@@ -132,7 +132,7 @@ export default function RRLandingPage() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(7,17,31,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(7,17,31,0.035)_1px,transparent_1px)] bg-[size:72px_72px]" />
       </div>
 
-      <header className="relative z-10 mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
+      <header className="fixed inset-x-0 top-0 z-30 mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
         <div className="flex items-center rounded-[1.5rem] border border-white/60 bg-white/34 px-4 py-3 shadow-[0_18px_48px_rgba(7,17,31,0.045)] backdrop-blur-xl sm:rounded-[1.75rem] sm:px-5 md:px-6">
           <a href="#topo" aria-label="RR Tecnologia e Qualidade" className="shrink-0 self-center">
             <LogoMark />
@@ -147,7 +147,7 @@ export default function RRLandingPage() {
         </div>
       </header>
 
-      <section id="topo" className="relative z-10 mx-auto grid max-w-7xl items-start gap-10 px-4 pb-20 pt-6 sm:gap-14 sm:px-6 sm:pb-24 sm:pt-8 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:pb-32 lg:pt-12">
+      <section id="topo" className="relative z-10 mx-auto grid max-w-7xl items-start gap-10 px-4 pb-20 pt-32 sm:gap-14 sm:px-6 sm:pb-24 sm:pt-36 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:pb-32 lg:pt-40">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="pt-1 sm:pt-2">
           <div className="mb-6 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#07111F]/58 sm:mb-8 sm:gap-4 sm:text-sm sm:tracking-[0.22em]">
             <span className="h-px w-8 bg-gradient-to-r from-[#1488FF] to-[#4DE2FF] sm:w-12" />
